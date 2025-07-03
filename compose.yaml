@@ -1,0 +1,6 @@
+﻿services:
+  supplymanager:
+    image: supplymanager
+    build:
+      context: .
+      dockerfile: SupplyManager/Dockerfile
