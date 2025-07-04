@@ -10,4 +10,8 @@ public class AppDbContext: DbContext
     }
     
     public DbSet<Product> Products { get; set; }
+    public DbSet<ProductOrder> ProductOrders { get; set; }
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<ProductStock> ProductStocks { get; set; }
 }

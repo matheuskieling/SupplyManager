@@ -3,6 +3,5 @@
 public record AddProductRequestDto(
     string Name,
     string? Description,
-    long Price,
-    int Quantity
+    long Price
 );

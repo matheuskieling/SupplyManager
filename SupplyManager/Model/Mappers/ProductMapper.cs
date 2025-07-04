@@ -1,4 +1,5 @@
 ﻿using SupplyManager.Model.DTO;
+using SupplyManager.Model.DTO.Reponses;
 
 namespace SupplyManager.Model.Mappers;
 
@@ -11,7 +12,17 @@ public static class ProductMapper
             Name = request.Name,
             Description = request.Description,
             Price = request.Price,
-            Quantity = request.Quantity
+        };
+    }
+
+    public static ProductResponseDto MapToProductResponseDto(Product product)
+    {
+        return new ProductResponseDto
+        {
+            Id = product.Id,
+            Name = product.Name,
+            Description = product.Description,
+            Price = product.Price
         };
     }
 }

@@ -26,8 +26,7 @@ public class ProductTests : IDisposable
         var request = new AddProductRequestDto(
             "Test Product",
             "Test Description",
-            100000,
-            100
+            100000
         );
         var response = await _fixture.SaveProductAsync(request);
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
@@ -36,7 +35,6 @@ public class ProductTests : IDisposable
         Assert.Equal(request.Name, product.Name);
         Assert.Equal(request.Description, product.Description);
         Assert.Equal(request.Price, product.Price);
-        Assert.Equal(request.Quantity, product.Quantity);
         
         var productsResponse = await _fixture.GetProductsAsync();
         Assert.Equal(HttpStatusCode.OK, productsResponse.StatusCode);
@@ -47,7 +45,6 @@ public class ProductTests : IDisposable
         Assert.Equal(request.Name, productFromDb.Name);
         Assert.Equal(request.Description, productFromDb.Description);
         Assert.Equal(request.Price, productFromDb.Price);
-        Assert.Equal(request.Quantity, productFromDb.Quantity);
     }
 
     [Fact]

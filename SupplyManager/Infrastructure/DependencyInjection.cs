@@ -17,5 +17,7 @@ public static class DependencyInjection
         });
         services.AddScoped<ProductService>();
         services.AddScoped<ProductRepository>();
+        services.AddScoped<ShopService>();
+        services.AddScoped<ShopRepository>();
     }
 }
