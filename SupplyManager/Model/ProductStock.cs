@@ -10,7 +10,6 @@ public class ProductStock
     public Guid Id { get; set; } = Guid.NewGuid();
     public long Quantity { get; set; }
     public Guid ProductId { get; set; }
-    
-    [ForeignKey(nameof(ProductId))]
-    public Product Product { get; set; }
+
+    [ForeignKey(nameof(ProductId))] public Product Product { get; set; } = null!;
 }

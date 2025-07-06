@@ -6,6 +6,7 @@ using SupplyManager.Model.DTO;
 
 namespace IntegrationTest.ProductTests;
 
+[Collection("IntegrationTests")]
 public class ProductTests : IDisposable
 {
     private readonly IntegrationTestsFixture<Program> _fixture;

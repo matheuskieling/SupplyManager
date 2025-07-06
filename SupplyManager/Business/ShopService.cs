@@ -52,10 +52,15 @@ public class ShopService(ProductService productService, ShopRepository repositor
             await transaction.CommitAsync();
             return transactionResult;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             await transaction.RollbackAsync();
             throw;
         }
+    }
+
+    public async Task<Transaction?> GetTransactionByIdAsync(Guid id)
+    {
+        return await repository.GetTransactionByIdAsync(id);
     }
 }

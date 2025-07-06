@@ -4,5 +4,5 @@ public class TransactionResponseDto
 {
     public Guid Id { get; set; }
     public DateTime CreatedAt { get; set; }
-    public ShoppingCartResponseDto ShoppingCart { get; set; }
+    public ShoppingCartResponseDto ShoppingCart { get; set; } = null!;
 }
